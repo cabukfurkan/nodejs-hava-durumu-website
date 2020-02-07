@@ -13,7 +13,8 @@ const forecast=(latitude,longitude,callback)=>{
             callback(undefined,{
                 summary: response.body.daily.data[0].summary,
                 temperatureHigh: response.body.daily.data[0].temperatureHigh,
-                temperatureLow: response.body.daily.data[0].temperatureLow
+                temperatureLow: response.body.daily.data[0].temperatureLow,
+                windSpeed: response.body.daily.data[0].windSpeed
             
             })
         }

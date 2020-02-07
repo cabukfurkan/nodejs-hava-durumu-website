@@ -55,7 +55,7 @@ app.get('/weather',(req,res)=>{
            return res.send({error})
            //return will stop function execeution no need to else block
         }
-        forecast(latitude, longitude, (error, {summary,temperatureLow,temperatureHigh}) => {
+        forecast(latitude, longitude, (error, {summary,temperatureLow,temperatureHigh,windSpeed}) => {
             if(error){
                 return res.send({error})
             }
@@ -63,7 +63,9 @@ app.get('/weather',(req,res)=>{
                 forecast:summary,
                 location:location,
                 temperatureHigh:temperatureHigh,
-                temperatureLow:temperatureLow
+                temperatureLow:temperatureLow,
+                windSpeed:windSpeed
+                
             })
         })
     })

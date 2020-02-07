@@ -6,6 +6,7 @@ let enteredLocation = document.querySelector('#location')
 let forecastResult=document.querySelector('#forecast')
 let minDegree=document.querySelector('#min-degree')
 let maxDegree=document.querySelector('#max-degree')
+let windSpeed=document.querySelector('#wind-speed')
 let bgImage=document.querySelector('.main-content')
 document.body.style.backgroundImage = "url('../img/leaves.gif')";
 
@@ -25,6 +26,7 @@ weatherForm.addEventListener('submit',(event)=>{
             forecastResult.textContent=data.forecast
             minDegree.textContent='Gün içi min sıcaklık '+Math.round(data.temperatureLow)+' derece'
             maxDegree.textContent='Gün içi max sıcaklık '+Math.round(data.temperatureHigh)+' derece'
+            windSpeed.textContent='Rüzgar hızı' + data.windSpeed +' km/h'
             enteredLocation.textContent=data.location
             
             if(data.temperatureHigh<25){
