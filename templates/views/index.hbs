@@ -1,0 +1,62 @@
+{{!-- to inject dynamic values in html --}}
+{{!-- to see this on the page we need to set up a route in main js --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBtg4SiiAIOMUP3GMy8B2IU7LffQcK1DqY"></script>
+
+    <script>
+        var searchInput ='search_input'
+        $(document).ready(function () {
+    var autocomplete;
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        types: ['geocode'],
+    });
+	
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var near_place = autocomplete.getPlace();
+  
+    });
+});
+    </script>
+
+</head>
+<body>
+    <div class="main-content">
+        <div id="clock-div">
+            <p id="clock">clock</p>
+        </div>
+        {{>header}}
+        <p>Size günlük hava durumu bilgilendirmesi yapmak için buradayım :)</p>
+        <p id="helper-1">Hava durumunu öğrenmek istediğiniz konumu giriniz.</p>
+    
+        <form>
+            <input id="search_input" placeholder="konumunuz">
+            <button>Tıklayınız</button>
+        </form>
+        <p id="forecast">...</p>
+        <p id="min-degree"></p>
+        <p id="max-degree"></p>
+        <p id="location"></p>
+        
+        <div class="container">
+            <p>ee atalarımız ne demiş</p>
+            <button type="button" id="quoteDisplayerBtn">oynat bakalım</button>
+            <blockquote>
+                <p id="quote">?</p>
+            </blockquote>
+        </div>
+    </div>
+{{>footer}}
+<script src="/js/app.js"></script>
+</body>
+</html>
+ 

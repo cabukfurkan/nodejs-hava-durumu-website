@@ -1,0 +1,87 @@
+body {
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    /* max-width: 100vh; */
+    text-align: center;
+    /* justify-content: center; */
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: 0% 5%;
+}
+.main-content{
+    flex-grow: 1;
+}
+
+
+footer{
+    color: #888888;
+    border-top:1px solid #eeeeee;
+    margin-top: 10px ;
+    padding: 0%;
+}
+
+header{
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+h1{
+    margin-top: 10px;
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+header a{
+    color: #888888;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.pp{
+    width: 150px;
+    height: 200px;
+}
+.mail{
+    font-style: italic;
+}
+
+input{
+    border: 1px solid #cccccc;
+    padding: 6px;
+}
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 6px;
+}
+button:hover{
+    background: #bebdbd;
+}
+#helper-1{
+    font-size: 14px;
+    font-style: italic;
+}
+
+.clock{
+    text-align: right;
+    padding-right: 0%;
+}
+#clock-div{
+    text-align: right;
+    margin-right: 5%;
+}
+.container{
+    margin-top: 150px;
+
+}
+
+#qutoeAuthor{
+    font-size: 14px;
+    font-style: italic;
+}
