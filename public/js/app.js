@@ -26,7 +26,7 @@ weatherForm.addEventListener('submit',(event)=>{
             forecastResult.textContent=data.forecast
             minDegree.textContent='Gün içi min sıcaklık '+Math.round(data.temperatureLow)+' derece'
             maxDegree.textContent='Gün içi max sıcaklık '+Math.round(data.temperatureHigh)+' derece'
-            windSpeed.textContent='Rüzgar hızı' + data.windSpeed +' km/h'
+            windSpeed.textContent='Rüzgar hızı ' + data.windSpeed +' km/h'
             enteredLocation.textContent=data.location
             
             if(data.temperatureHigh<25){

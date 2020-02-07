@@ -86,5 +86,11 @@ button:hover{
     font-style: italic;
 }
 #wind-speed{
-    font-size: 10px;
+    font-size: 12px;
+}
+#max-degree{
+    font-size: 12px;
+}
+#min-degree{
+    font-size: 12px;
 }
