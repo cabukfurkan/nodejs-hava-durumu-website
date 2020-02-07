@@ -1,4 +1,3 @@
-console.log('client side js file loaded!')
 //get the data from client side
 //make the http req from clent side
 const weatherForm =document.querySelector('form')
